@@ -1,0 +1,28 @@
+body {
+    background: black;
+}
+#header {
+    background: black;
+}
+.top {
+    background: white;
+}
+
+h1 {
+    text-align: center;
+}
+nav {
+    text-align: center;
+    background: black;
+    color: white
+}
+.video {
+    text-align: center;
+    justify-content: space-around;
+}
+p {
+    text-align: center;
+}
+.cards {
+    text-align: center;
+}
