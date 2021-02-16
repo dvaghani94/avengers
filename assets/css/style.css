@@ -10,6 +10,7 @@ body {
 
 h1 {
     text-align: center;
+    font-family: 'Shadows Into Light', cursive;
 }
 nav {
     text-align: center;
@@ -25,4 +26,7 @@ p {
 }
 .cards {
     text-align: center;
+}
+#avenge {
+    font-style: italic;
 }

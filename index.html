@@ -7,18 +7,18 @@
     <title>Marvel Id</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap"
-        rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
-    <div id="header"class="flex-row align-center justify-center w-100">
-        <div class="col-12 flex-column align-center w-100">
-            <h1 class="col-9 text-light justify-right">Do you Know The Avengers?</h1>
+    <div id="header" class="container w-100">
+        <div class="row w-100">
+            <h1 class="col-12 text-light">Do you Know The Avengers?</h1>
 
             <!-- link to the test when here is pressed -->
-            <p>If so, click <span>here</span> to see if you can pass the test!</p>
+            <p class="col">If so, click <span>here</span> to see if you can pass the test!</p>
             <!-- <img src="assets/images/avengers logo.jpg" > -->
             <nav class="row w-100 justify-content-around">
                 <div id="iron-man">Iron Man</div>
@@ -30,39 +30,47 @@
                 <div id="hawkeye">Hawkeye</div>
             </nav>
         </div>
-    </div> 
-        <!-- avengers trailer -->
-    <div id="video">
-    <iframe class="col-12 video" width="560" height="600" src="https://www.youtube.com/embed/eOrNdBpGMv8"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
     </div>
+    <!-- avengers trailer -->
+    <section class="container w-100">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 pt-3 mt-3">
+                <p>Welcome Marvel Fans! Throughout this webpage you will be able to find all information attaining to <span id="avenge">The Avengers</span>. Above, you will find tabs with links to each character from the movie. Click on the links to see their bio, superpowers and much more! Any character in particular you really liked from the movie? Check out their individual movies by clicking on the images below. Make sure to pay attention! To really test your Avengers knowledge, we have designed a short quiz you can find by clicking here!</p>
+            </div>
+            <div id="video" class="col-lg-6 col-md-12 col-sm-12">
+                <iframe class="p-2" height="330" width="500" src="https://www.youtube.com/embed/eOrNdBpGMv8" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+    </section>
     <!-- character cards -->
     <section class="container cards">
-    <div class="row w-100 justify-content-around">
-        <div id="iron-man" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
-            <img src="assets/images/all 7 iron.jpg">
+        <div class="row w-100 justify-content-around">
+            <div id="iron-man" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
+                <img src="assets/images/all 7 iron.jpg">
+            </div>
+            <div id="thor" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
+                <img src="assets/images/all 7 thor.jpg">
+            </div>
+            <div id="captain-america" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
+                <img src="assets/images/all 7 captain.jpg">
+            </div>
+            <div id="hulk" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
+                <img src="assets/images/all 7 hulk.jpg">
+            </div>
+            <div id="black-widow" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
+                <img src="assets/images/all 7 blackwidow.jpg">
+            </div>
+            <div id="nick-fury" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
+                <img src="assets/images/all 7 nick.jpg">
+            </div>
+            <div id="hawkeye" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
+                <img src="assets/images/all 7 hawk.jpg">
+            </div>
+
         </div>
-        <div id="thor" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
-            <img src="assets/images/all 7 thor.jpg">
-        </div>
-        <div id="captain-america" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
-            <img src="assets/images/all 7 captain.jpg">
-        </div>
-        <div id="hulk" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
-            <img src="assets/images/all 7 hulk.jpg">
-        </div>
-        <div id="black-widow" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
-            <img src="assets/images/all 7 blackwidow.jpg">
-        </div>
-        <div id="nick-fury" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
-           <img src="assets/images/all 7 nick.jpg">
-        </div>
-        <div id="hawkeye" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
-           <img src="assets/images/all 7 hawk.jpg">
-        </div>
-      
-    </div>
     </section>
 
 
@@ -71,3 +79,6 @@
 </body>
 
 </html>
+
+
+991
