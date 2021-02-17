@@ -1,151 +1,169 @@
+var startBtn = document.querySelector(".btn-start");
+var quiz = document.querySelector(".quiz-section");
+var quizStarter = document.querySelector(".container");
+
 var triviaQuestions = [ {
     question: "Who does HUlk call 'puny god' while throwing them around like a rag doll?",
     options: [
-        "Thor",
-        "Loki",
-        "Captian America",
-        "Iron Man",
+        {option: "Thor", answer: false},
+        {option: "Loki", answer: true},
+        {option: "Captian America", answer: false},
+        {option: "Iron Man", answer: false},
     ],
-    answer: "Loki"
 },
 {
     question: "With what is Loki able to control minds?",
     options: [
-        "Sceptre",
-        "Mjolnir",
-        "Stick",
-        "Shield",
+        {option: "Sceptre", answer: true},
+        {option: "Mjolnir", answer: false},
+        {option: "Stick", answer: false},
+        {option: "Shield", answer: false},
     ],
-    answers: "Sceptre"
 },
 {
     question: "Where was Captain America at the start of the movie?",
     options: [
-        "Hospital",
-        "Aircraft",
-        "Gym",
-        "Home",
+        {option: "Hospital", answer: false},
+        {option: "Aircraft", answer: false},
+        {option: "Gym", answer: true},
+        {option: "Home", answer: false},
     ],
-    answers: "Gym"
 },
 {
     question: "What does Captain America bring to the fight?",
     options: [
-        "His shield",
-        "Mjolnir",
-        "Sword",
-        "Bow & Arrow",
+        {option: "His shield", answer: true},
+        {option: "Mjolnir", answer: false},
+        {option: "Sword", answer: false},
+        {option: "Bow & Arrow", answer: false},
     ],
-    answers: "His shield"
 },
 {
     question: "What is the name of Thor's hammer?", 
     options: [
-        "Jupiter",
-        "Hammer",
-        "Smasher",
-        "Mjolnir",
+        {option: "Jupiter", answer: false},
+        {option: "Hammer", answer: false},
+        {option: "Smasher", answer: false},
+        {option: "Mjolnir", answer: true},
     ],
-    answers: "Mjolnir"
 },
 {
     question: "Who was the first Avenger?",
     options: [
-        "Thor",
-        "Loki",
-        "Captian America",
-        "Iron Man",
+        {option: "Thor", answer: false},
+        {option: "Loki", answer: false},
+        {option: "Captian America", answer: true},
+        {option: "Iron Man", answer: false},
     ],
-    answer: "Captain America"
 },
 {
     question: "Who attacked New York?",
     options: [
-        "Thanos",
-        "Loki",
-        "Asgardians",
-        "Chitauri",
+        {option: "Thanos", answer: false},
+        {option: "Loki", answer: false},
+        {option: "Asgardians", answer: false},
+        {option: "Chitauri", answer: true},
     ],
-    answers: "Chitauri"
 },
 {
     question: "Who was mind controlled by Loki?",
     options: [
-        "Steve Rogers",
-        "Black Widow",
-        "Hawkeye",
-        "Nick Fury",
+        {option: "Steve Rogers", answer: false},
+        {option: "Black Widow", answer: false},
+        {option: "Hawkeye", answer: true},
+        {option: "Nick Fury", answer: false},
     ],
-    answers: "Hawkeye"
 },
 {
     question: "What is Black Widows name?",
     options: [
-        "Pepper Potts",
-        "Natasha Romanoff",
-        "Nebula",
-        "Jane Foster",
+        {option: "Pepper Potts", answer: false},
+        {option: "Natasha Romanoff", answer: true},
+        {option: "Nebula", answer: false},
+        {option: "Jane Foster", answer: false},
     ],
-    answers: "Natasha Romanoff"
 },
 {
     question: "Who is the executive director of S.H.I.E.L.D?", 
     options: [
-        "Nick Fury",
-        "Clint Barton",
-        "Bruce Banner",
-        "Erik Selvig",
+        {option: "Nick Fury", answer: true},
+        {option: "Clint Barton", answer: false},
+        {option: "Bruce Banner", answer: false},
+        {option: "Erik Selvig", answer: false},
     ],
-    answers: "Nick Fury"
 },
 {
     question: "How many Avengers are there?", 
     options: [
-        "9",
-        "6",
-        "4",
-        "7",
+        {option: "9", answer: false},
+        {option: "6", answer: true},
+        {option: "4", answer: false},
+        {option: "7", answer: false},
     ],
-    answers: "6"
 },
 {
     question: "What is Hawkeye's speciality?",
     options: [
-        "Swords",
-        "Nunchucks",
-        "Boomerang",
-        "Bow & Arrow",
+        {option: "Swords", answer: false},
+        {option: "Nunchucks", answer: false},
+        {option: "Boomerang", answer: false},
+        {option: "Bow & Arrow", answer: true},
     ],
-    answer: "Bow & Arrow"
 },
 {
     question: "Where does Natasha find Bruce?",
     options: [
-        "China",
-        "London",
-        "India",
-        "Mexico",
+        {option: "China", answer: false},
+        {option: "London", answer: false},
+        {option: "India", answer: true},
+        {option: "Mexico", answer: false},
     ],
-    answers: "India"
 },
 {
     question: "What is Tony Starks superpower?",
     options: [
-        "Iron Man",
-        "Super strength",
-        "Super speed",
-        "Flying",
+        {option: "Iron Man", answer: true},
+        {option: "Super strength", answer: false},
+        {option: "Super speed", answer: false},
+        {option: "Flying", answer: false},
     ],
-    answers: "Iron Man"
 },
 {
     question: "Whose death resulted in a turning point for the team?",
     options: [
-        "Pepper Potts",
-        "Phil Coulson",
-        "Nebula",
-        "Jane Foster",
+        {option: "Pepper Potts", answer: false},
+        {option: "Phil Coulson", answer: false},
+        {option: "Nebula", answer: false},
+        {option: "Jane Foster", answer: false},
     ],
-    answers: "Phil Coulson"
 }
 ];
+
+startBtn.addEventListener("click", startQuiz);
+
+var quizQuestions = document.querySelector(".question-text");
+var answerChoice = document.querySelector(".buttons-group");
+
+function startQuiz() {
+    console.log(startBtn);
+   startBtn.classList.add("hide");
+   quizStarter.classList.add("hide");
+   randomQuestions = triviaQuestions.sort();
+   currentQuestion = 0;
+   quiz.classList.remove("hide");
+   setNext()
+}
+
+
+
+function setNext() {
+    questionList(randomQuestions[currentQuestion]);
+}
+
+function questionList(question) {
+
+}
+
+function correctAnswer() {
+
+}
