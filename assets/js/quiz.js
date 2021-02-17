@@ -1,4 +1,4 @@
-var startBtn = document.querySelector(".btn-start");
+var startBtn = document.querySelector("#start");
 var quiz = document.querySelector(".quiz-section");
 var quizStarter = document.querySelector(".container");
 
@@ -143,6 +143,7 @@ startBtn.addEventListener("click", startQuiz);
 
 var quizQuestions = document.querySelector(".question-text");
 var answerChoice = document.querySelector(".buttons-group");
+var randomQuestions, currentQuestion;
 
 function startQuiz() {
     console.log(startBtn);
@@ -154,16 +155,68 @@ function startQuiz() {
    setNext()
 }
 
-
-
 function setNext() {
     questionList(randomQuestions[currentQuestion]);
+    resetQuestion()
 }
+
+function resetQuestion() {
+    nextBtn.classList.add("hide");
+    while (answerChoice.firstChild) {
+        answerChoice.removeChild;
+        (answerChoice.firstChild);
+    }
+}
+
 
 function questionList(question) {
-
+    quizQuestions.innerText = question.question;
+    question.options.forEach(answer => {
+        var optionBtn = document.createElement("btn");
+        optionBtn.innerText = answer.innerText;
+        optionBtn.classList.add("button");
+        if (answer.correct) {
+            optionBtn.dataset.correct = answer.correct;
+        }
+        option.addEventListener("click", correctAnswer);
+        answerChoice.appendChild(btn);
+    })
 }
 
-function correctAnswer() {
+var nextBtn = document.querySelector(".btn-next")
+nextBtn.addEventListener("click", () => {
+    currentQuestion++
+    setNext()
+})
 
+function correctAnswer(e) {
+    var userChoice = e.target
+    var correctAnswer = userChoice.dataset.answer;
+    setCorrectAnswer(document.body, answer);
+    Array.from(answerChoice.childen).forEach(btn => {
+        setCorrectAnswer(btn, btn.dataset.answer)
+    })
+    if(randomQuestions.length > currentQuestion + 1) {
+        nextBtn.classList.remove("hide");
+    } 
+    else {
+        startBtn.innerText = "Restart";
+        startBtn.classList.remove("hide")
+    }
 }
+
+function setCorrectAnswer(element, answer) {
+    clearChoice(element);
+    if (answer) {
+        element.classList.add("correct");
+    }
+    else {
+        element.classList.add("wrong");
+    }
+}
+
+function clearChoice(element) {
+    element.classList.remove("correct");
+    element.classList.remove("wrong");
+}
+
