@@ -1,1 +1,14 @@
+body {
+    background-color: blanchedalmond;
+    box-sizing: border-box;
 
+}
+
+h1 {
+    font-size: 30px;
+
+}
+
+.hide {
+    display: none;
+}

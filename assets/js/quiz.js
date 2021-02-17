@@ -1,9 +1,9 @@
-var startBtn = document.querySelector("#start");
-var quiz = document.querySelector(".quiz-section");
+var startBtn = document.querySelector(".btn-start");
+var quiz = document.querySelector("#quiz-section");
 var quizStarter = document.querySelector(".container");
 
 var triviaQuestions = [ {
-    question: "Who does HUlk call 'puny god' while throwing them around like a rag doll?",
+    question: "Who does Hulk call 'puny god' while throwing them around like a rag doll?",
     options: [
         {option: "Thor", answer: false},
         {option: "Loki", answer: true},
@@ -141,19 +141,25 @@ var triviaQuestions = [ {
 
 startBtn.addEventListener("click", startQuiz);
 
-var quizQuestions = document.querySelector(".question-text");
-var answerChoice = document.querySelector(".buttons-group");
-var randomQuestions, currentQuestion;
+var quizQuestions = document.querySelector("#question-text");
+var answerChoice = document.querySelector("#buttons-group");
+
 
 function startQuiz() {
     console.log(startBtn);
    startBtn.classList.add("hide");
    quizStarter.classList.add("hide");
-   randomQuestions = triviaQuestions.sort();
+   randomQuestions = triviaQuestions.sort()
    currentQuestion = 0;
    quiz.classList.remove("hide");
    setNext()
 }
+
+var nextBtn = document.querySelector(".btn-next")
+nextBtn.addEventListener("click", () => {
+    currentQuestion++
+    setNext()
+})
 
 function setNext() {
     questionList(randomQuestions[currentQuestion]);
@@ -171,30 +177,24 @@ function resetQuestion() {
 
 function questionList(question) {
     quizQuestions.innerText = question.question;
-    question.options.forEach(answer => {
+    triviaQuestions.options.forEach(options => {
         var optionBtn = document.createElement("btn");
-        optionBtn.innerText = answer.innerText;
+        optionBtn.innerText = option.innerText;
         optionBtn.classList.add("button");
-        if (answer.correct) {
-            optionBtn.dataset.correct = answer.correct;
+        if (option.answer) {
+            optionBtn.dataset.answer = option.answer;
         }
-        option.addEventListener("click", correctAnswer);
+        options.addEventListener("click", correctAnswer);
         answerChoice.appendChild(btn);
     })
 }
 
-var nextBtn = document.querySelector(".btn-next")
-nextBtn.addEventListener("click", () => {
-    currentQuestion++
-    setNext()
-})
-
 function correctAnswer(e) {
     var userChoice = e.target
-    var correctAnswer = userChoice.dataset.answer;
-    setCorrectAnswer(document.body, answer);
+    var correctAnswer = userChoice.dataset.options;
+    setCorrectAnswer(document.body, options);
     Array.from(answerChoice.childen).forEach(btn => {
-        setCorrectAnswer(btn, btn.dataset.answer)
+        setCorrectAnswer(btn, btn.dataset.option)
     })
     if(randomQuestions.length > currentQuestion + 1) {
         nextBtn.classList.remove("hide");
