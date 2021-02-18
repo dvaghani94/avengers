@@ -58,3 +58,13 @@ button {
     color: rgb(204, 250, 39);
     font-weight: bolder;
 }
+
+.false {
+    color: rgb(204, 250, 39);
+    background-color: crimson;
+}
+
+.true {
+    color: rgb(204, 250, 39);
+    background-color: darkgreen;
+}

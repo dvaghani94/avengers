@@ -198,7 +198,7 @@ function correctAnswer(e) {
     var userChoice = e.target
     var correctAnswer = userChoice.dataset.answer;
     setCorrectAnswer(document.body, answer);
-    Array.from(answerChoice.childen).forEach(button => {
+    Array.from(answerChoice.children).forEach(button => {
         setCorrectAnswer(button, button.dataset.answer)
     })
     if(randomQuestions.length > currentQuestion + 1) {
