@@ -177,6 +177,9 @@ function resetQuestion() {
 
 function questionList(question) {
     quizQuestions.innerText = question.question;
+
+    answerChoice.innerHTML = "";
+
     question.options.forEach(option => {
 
         console.log(option.option);
