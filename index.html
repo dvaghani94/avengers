@@ -14,13 +14,13 @@
 </head>
 
 <body>
-    <div id="header" class="container w-100">
+    <header id="header" class="container w-100">
         <div class="row w-100">
             <img src="./assets/images/avanegers header.jpg" class="col-12">
             
             <nav class="row w-100 justify-content-around">
 
-                <li class="dropdown">
+                <div class="dropdown">
                     <button class="dropbtn">Superhero Cards</button>
                     <div class="dropdown-content">
                         <a href="#iron-man">Iron-man</a>
@@ -30,27 +30,41 @@
                         <a href="#black-widow">Black Widow</a>
                         <a href="#nick-fury">Nick Fury</a>
                         <a href="#hawkeye">Hawkeye</a>
-                    </li>
-                    <li class="dropdown">
+                    </div>
+                </div>
+                    <div class="dropdown">
                 <button class="dropbtn">Avengers Contact</button>
                     <div class="dropdown-content">
                         <a href="#twitter">Twitter</a>
                     </div>
-                    </li>
+                    </div>
                 <button class="drpbtn">Movie Trailer</button>
                 <button class="drpbtn"><a href="https://www.marvel.com/"></a>Marvel Studios</button>
                 <button class="drpbtn">Quiz</button>
             </nav>
         </div>
-    </div>
-    <!-- <h1><button onclick="myFunction()">light</button></h1> -->
+    </header>
+
     <!-- avengers trailer -->
     <section class="container w-100">
         <div class="row">
             
             <div class="col-lg-6 col-md-12 col-sm-12 pt-3 mt-3">
                 <h1 class="text-light">How Well do you Know The Avengers?</h1>
-                <p>Welcome Marvel Fans! Throughout this webpage you will be able to find all information attaining to <span id="avenge">The Avengers</span>. Above, you will find tabs with links to each character from the movie. Click on the links to see their bio, superpowers and much more! Any character in particular you really liked from the movie? Check out their individual movies by clicking on the images below. Make sure to pay attention! To really test your Avengers knowledge, we have designed a short quiz you can find by clicking <span id="quiz-link">here</span>!</p>
+                <p>Welcome Marvel Fans! Throughout this webpage you will be able to find all information attaining to <span id="avenge">The Avengers</span>. Above, you will find tabs with links to each character from the movie. Click on the links to see their bio, superpowers and much more! Any character in particular you really liked from the movie? Check out their individual movies by clicking on the images below. Make sure to pay attention! To really test your Avengers knowledge, we have designed a short quiz you can find by clicking<button type=“button” class=“btn-start” id=“start”>Start</button>
+                !</p>
+                
+                <div class=“hide” id=“quiz-section”>
+                    <h2 id=“question-text”></h2>
+                      <div id=“buttons-group”>
+                        <button class=“btn”>Answer1</button>
+                        <button class=“btn”>Answer2</button>
+                        <button class=“btn”>Answer3</button>
+                        <button class=“btn”>Answer4</button>
+                      </div>
+                     <button type=“button” class=“btn-next” id=“next”>Next</buttonck>
+                </div>
+
             </div>
             <div id="video" class="col-lg-6 col-md-12 col-sm-12">
                 <iframe class="p-2" height="330" width="500" src="https://www.youtube.com/embed/eOrNdBpGMv8" frameborder="0"
@@ -63,7 +77,7 @@
     <!-- character cards -->
     <section class="container cards">
 <div class="row justify-content-around">
-    <div id="iron-man" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
+    <card id="iron-man" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
@@ -76,8 +90,8 @@
                     </div>
             </div>
         </div>
-    </div> 
-<div id="thor" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
+    </card> 
+<card id="thor" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
     <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
@@ -90,9 +104,9 @@
                     </div>
             </div>
     </div>
-</div> 
+</card> 
 
-<div id="captain-america" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
+<card id="captain-america" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -105,9 +119,9 @@
                 </div>
         </div>
     </div>
-</div> 
+</card> 
 
-<div id="hulk" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
+<card id="hulk" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -120,9 +134,9 @@
                 </div>
         </div>
     </div>
-</div>
+</card>
 
-<div id="black-widow" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
+<card id="black-widow" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -135,9 +149,9 @@
                 </div>
         </div>
     </div>
-</div>
+</card>
             
-<div id="nick-fury" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
+<card id="nick-fury" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -150,9 +164,9 @@
                 </div>
         </div>
     </div>
-</div>
+</card>
 
-<div id="hawkeye" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
+<card id="hawkeye" class="col-sm-6 col-lg-3 col-md-3 1m-2 p-2">
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -165,7 +179,7 @@
                 </div>
         </div>
     </div>
-</div>
+</card>
 </div>
     </section>
     

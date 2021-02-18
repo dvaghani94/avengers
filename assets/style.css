@@ -13,13 +13,13 @@ body {
 h1 {
     text-align: center;
     font-family: 'Shadows Into Light', cursive;
-    color: red;
+    /* color: red; */
 }
 
 nav {
     text-align: center;
     background: black;
-    color: white
+    /* color: white; */
 }
 
 .video {
@@ -29,7 +29,7 @@ nav {
 
 p {
     text-align: center;
-    color: white;
+    color:green;
 }
 
 .cards {
@@ -50,7 +50,7 @@ p {
 
 .drpbtn, .dropbtn {
     background-color: black;
-    color: white;
+    color: red;
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -79,7 +79,7 @@ p {
 }
 
 .dropdown-content a:hover {
-    background-color:skyblue;
+    background-color:goldenrod;
 }
 
 .dropdown:hover .dropdown-content {
@@ -87,7 +87,7 @@ p {
 }
 
 .drpbtn:hover, .dropdown:hover .dropbtn {
-    background-color:red;
+    background-color: gold;
 }
 
 .flip-card {
