@@ -163,7 +163,7 @@ nextBtn.addEventListener("click", () => {
 
 function setNext() {
     questionList(randomQuestions[currentQuestion]);
-    // resetQuestion()
+    //resetQuestion()
 }
 
 function resetQuestion() {
@@ -190,7 +190,7 @@ function questionList(question) {
         }
         optionBtn.addEventListener("click", correctAnswer);
         answerChoice.appendChild(optionBtn)
-        
+
     })
 }
 
@@ -198,8 +198,8 @@ function correctAnswer(e) {
     var userChoice = e.target
     var correctAnswer = userChoice.dataset.answer;
     setCorrectAnswer(document.body, answer);
-    Array.from(answerChoice.childen).forEach(btn => {
-        setCorrectAnswer(btn, btn.dataset.answer)
+    Array.from(answerChoice.childen).forEach(button => {
+        setCorrectAnswer(button, button.dataset.answer)
     })
     if(randomQuestions.length > currentQuestion + 1) {
         nextBtn.classList.remove("hide");
@@ -210,7 +210,7 @@ function correctAnswer(e) {
     }
 }
 
-function setCorrectAnswer(element, ) {
+function setCorrectAnswer(element, answer) {
     clearChoice(element);
     if (answer) {
         element.classList.add("true");
