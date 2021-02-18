@@ -2,8 +2,6 @@
 var searchInput = "avengers"
 var apiUrl = "https://api.twitter.com/2/tweets/search/recent?query="
 var proxy = "https://cors-anywhere.herokuapp.com/"
-// https://cors-anywhere.herokuapp.com/
-// https://cors-anywhere.herokuapp.com
 
 
 var myHeaders = new Headers();
@@ -23,74 +21,6 @@ fetch(queryString, requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
-
-
-
-
-// var getAvengers = () => {
-
-// fetch(`http://www.omdbapi.com/?t=avengers&apikey=fbdde902`)
-//   .then(res => res.json())
-//   .then(posts => console.log(posts))
-// }
-
-// var getIronMan = () => {
-
-// fetch(`http://www.omdbapi.com/?t=iron+man&apikey=fbdde902`)
-//   .then(res => res.json())
-//   .then(posts => console.log(posts))
-// }
-
-// var getThor = () => {
-
-//   fetch(`http://www.omdbapi.com/?t=thor&apikey=fbdde902`)
-//     .then(res => res.json())
-//     .then(posts => console.log(posts))
-//   }
-
-// var getCaptainAmerica = () => {
-
-// fetch(`http://www.omdbapi.com/?t=captain+america&apikey=fbdde902`)
-//   .then(res => res.json())
-//   .then(posts => console.log(posts))
-// }
-
-// var getHulk = () => {
-
-//   fetch(`http://www.omdbapi.com/?t=hulk&apikey=fbdde902`)
-//     .then(res => res.json())
-//     .then(posts => console.log(posts))
-//   }
-
-// var getBlackWidow = () => {
-
-// fetch(`http://www.omdbapi.com/?t=black+widow&apikey=fbdde902`)
-//   .then(res => res.json())
-//   .then(posts => console.log(posts))
-// }
-
-// var getNickFury = () => {
-
-//   fetch(`http://www.omdbapi.com/?t=avengers&apikey=fbdde902`)
-//     .then(res => res.json())
-//     .then(posts => console.log(posts))
-//   }
-
-// var getHawkeye = () => {
-
-// fetch(`http://www.omdbapi.com/?t=avengers&apikey=fbdde902`)
-//   .then(res => res.json())
-//   .then(posts => console.log(posts))
-// }
-
-
-
-// getAvengers();
-// getIronMan();
-// getThor();
-// getCaptainAmerica();
-// getHulk();
-
 
 
 
