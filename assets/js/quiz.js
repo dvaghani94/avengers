@@ -166,10 +166,11 @@ function setNext() {
 }
 
 function questionList(question) {
+    //if (currentQuestion >= quizQuestions.length) {
+      //  showScore()
+    //}
+
     quizQuestions.innerText = question.question;
-    if (quizQuestions = "") {
-        showScore()
-    }
 
     answerChoice.innerHTML = "";
 
@@ -221,8 +222,8 @@ function clearChoice(element) {
     element.classList.remove("false");
 }
 
-var userScore = 0;
+//var userScore = 0;
 
-function showScore() {
-    if (document.getElementById("score").innerHTML === correctAmswer) userScore++;
-}
+//function showScore() {
+  //  if (document.getElementById("score").innerHTML === correctAnswer) userScore++;
+//}
