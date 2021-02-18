@@ -165,17 +165,11 @@ function setNext() {
     questionList(randomQuestions[currentQuestion]);
 }
 
-function resetQuestion() {
-    nextBtn.classList.add("hide");
-    while (answerChoice.firstChild) {
-        answerChoice.removeChild;
-        (answerChoice.firstChild);
-    }
-}
-
-
 function questionList(question) {
     quizQuestions.innerText = question.question;
+    if (quizQuestions = "") {
+        showScore()
+    }
 
     answerChoice.innerHTML = "";
 
@@ -227,3 +221,8 @@ function clearChoice(element) {
     element.classList.remove("false");
 }
 
+var userScore = 0;
+
+function showScore() {
+    if (document.getElementById("score").innerHTML === correctAmswer) userScore++;
+}
