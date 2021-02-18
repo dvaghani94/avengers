@@ -32,9 +32,22 @@ p {
 }
 .tabs {
     color: red;
-    
-    
+     
 }
 #quiz-link {
     color: blue;
+}
+h2 {
+    color: white;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#tags {
+    color: red;
+}
+#footer {
+    text-align: center;
 }
