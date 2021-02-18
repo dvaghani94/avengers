@@ -194,7 +194,7 @@ function correctAnswer(e) {
     var correctAnswer = userChoice.dataset.options;
     setCorrectAnswer(document.body, options);
     Array.from(answerChoice.childen).forEach(btn => {
-        setCorrectAnswer(btn, btn.dataset.option)
+        setCorrectAnswer(btn, btn.dataset.options)
     })
     if(randomQuestions.length > currentQuestion + 1) {
         nextBtn.classList.remove("hide");
@@ -205,7 +205,7 @@ function correctAnswer(e) {
     }
 }
 
-function setCorrectAnswer(element, answer) {
+function setCorrectAnswer(element, ) {
     clearChoice(element);
     if (answer) {
         element.classList.add("correct");
