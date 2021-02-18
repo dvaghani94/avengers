@@ -188,16 +188,16 @@ function questionList(question) {
         if (option.answer) {
             optionBtn.dataset.answer = option.answer;
         }
-        optionBtn.addEventListener("click", correctAnswer);
+        optionBtn.addEventListener("click", checkAnswer);
         answerChoice.appendChild(optionBtn)
 
     })
 }
 
-function correctAnswer(e) {
+function checkAnswer(e) {
     var userChoice = e.target
     var correctAnswer = userChoice.dataset.answer;
-    setCorrectAnswer(document.body, answer);
+    setCorrectAnswer(document.body, correctAnswer);
     Array.from(answerChoice.children).forEach(button => {
         setCorrectAnswer(button, button.dataset.answer)
     })
@@ -210,9 +210,9 @@ function correctAnswer(e) {
     }
 }
 
-function setCorrectAnswer(element, answer) {
+function setCorrectAnswer(element, correctAnswer) {
     clearChoice(element);
-    if (answer) {
+    if (correctAnswer) {
         element.classList.add("true");
     }
     else {
