@@ -1,6 +1,17 @@
+// var searchInput = document.getElementById("search-input");
+var searchInput = "avengers"
+var apiUrl = "https://api.twitter.com/2/tweets/search/recent?query="
+var proxy = "https://cors-anywhere.herokuapp.com/"
+// https://cors-anywhere.herokuapp.com/
+// https://cors-anywhere.herokuapp.com
+
+
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "OAuth oauth_consumer_key=\"RcmHKtrA030GlJA0nuoj10YTn\",oauth_token=\"270341803-oi0gMyN0m0zPWZIQExjqmzRAHFmqDHsBpALC9JGr\",oauth_signature_method=\"HMAC-SHA1\",oauth_timestamp=\"1613669793\",oauth_nonce=\"6KHa8y48m9R\",oauth_version=\"1.0\",oauth_signature=\"k2kGpkfhxx201AI3CSujCZNe3nw%3D\"");
-myHeaders.append("Cookie", "guest_id=v1%3A161366419056994383; personalization_id=\"v1_nK6my6t1evj80ztdtJSraQ==\"");
+myHeaders.append("Authorization", "Bearer AAAAAAAAAAAAAAAAAAAAACZXMwEAAAAAbTZ9SY0Z8d%2BTq1VFBrqDYs%2FWeKo%3Di1vVMs206mb6CvipDlLvJuGgxI1qzQlRceramS8GCUpNeNw5sx");
+myHeaders.append("Cookie", "guest_id=v1%3A161367772454425496; personalization_id=\"v1_XvRSwPBrVMSD5+4Z3/QK7A==\"");
+
+var queryString = proxy + apiUrl + searchInput;
+console.log(queryString)
 
 var requestOptions = {
   method: 'GET',
@@ -8,10 +19,11 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://cors-anywhere.herokuapp.com/https://api.twitter.com/2/tweets/search/recent?query=avengers", requestOptions)
+fetch(queryString, requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
+
 
 
 
