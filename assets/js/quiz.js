@@ -163,7 +163,6 @@ nextBtn.addEventListener("click", () => {
 
 function setNext() {
     questionList(randomQuestions[currentQuestion]);
-    //resetQuestion()
 }
 
 function resetQuestion() {
