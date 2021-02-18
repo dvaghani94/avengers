@@ -132,7 +132,7 @@ var triviaQuestions = [ {
     question: "Whose death resulted in a turning point for the team?",
     options: [
         {option: "Pepper Potts", answer: false},
-        {option: "Phil Coulson", answer: false},
+        {option: "Phil Coulson", answer: true},
         {option: "Nebula", answer: false},
         {option: "Jane Foster", answer: false},
     ],
@@ -163,7 +163,7 @@ nextBtn.addEventListener("click", () => {
 
 function setNext() {
     questionList(randomQuestions[currentQuestion]);
-    resetQuestion()
+    // resetQuestion()
 }
 
 function resetQuestion() {
@@ -177,24 +177,29 @@ function resetQuestion() {
 
 function questionList(question) {
     quizQuestions.innerText = question.question;
-    triviaQuestions.options.forEach(options => {
-        var optionBtn = document.createElement("btn");
-        optionBtn.innerText = option.innerText;
-        optionBtn.classList.add("button");
+    question.options.forEach(option => {
+
+        console.log(option.option);
+        console.log(option.answer);
+
+        var optionBtn = document.createElement("button");
+        optionBtn.innerText = option.option;
+        optionBtn.classList.add("btn");
         if (option.answer) {
             optionBtn.dataset.answer = option.answer;
         }
-        options.addEventListener("click", correctAnswer);
-        answerChoice.appendChild(btn);
+        optionBtn.addEventListener("click", correctAnswer);
+        answerChoice.appendChild(optionBtn)
+        
     })
 }
 
 function correctAnswer(e) {
     var userChoice = e.target
-    var correctAnswer = userChoice.dataset.options;
-    setCorrectAnswer(document.body, options);
+    var correctAnswer = userChoice.dataset.answer;
+    setCorrectAnswer(document.body, answer);
     Array.from(answerChoice.childen).forEach(btn => {
-        setCorrectAnswer(btn, btn.dataset.options)
+        setCorrectAnswer(btn, btn.dataset.answer)
     })
     if(randomQuestions.length > currentQuestion + 1) {
         nextBtn.classList.remove("hide");
@@ -208,15 +213,15 @@ function correctAnswer(e) {
 function setCorrectAnswer(element, ) {
     clearChoice(element);
     if (answer) {
-        element.classList.add("correct");
+        element.classList.add("true");
     }
     else {
-        element.classList.add("wrong");
+        element.classList.add("false");
     }
 }
 
 function clearChoice(element) {
-    element.classList.remove("correct");
-    element.classList.remove("wrong");
+    element.classList.remove("true");
+    element.classList.remove("false");
 }
 
