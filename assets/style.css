@@ -13,13 +13,12 @@ body {
 h1 {
     text-align: center;
     font-family: 'Shadows Into Light', cursive;
-    /* color: red; */
 }
 
 nav {
     text-align: center;
     background: black;
-    /* color: white; */
+    color: white;
 }
 
 .video {
@@ -46,48 +45,6 @@ p {
 
 #quiz-link {
     color: blue;
-}
-
-.drpbtn, .dropbtn {
-    background-color: black;
-    color: red;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position:absolute;
-    background-color: white;
-    min-width: 156px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color:goldenrod;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.drpbtn:hover, .dropdown:hover .dropbtn {
-    background-color: gold;
 }
 
 .flip-card {
@@ -128,4 +85,20 @@ p {
     background-color:black;
     color:white;
     transform: rotateY(180deg);
+  }
+
+  h2 {
+      color: white;
+      text-align: center;
+      font-family: "shadows into light", cursive;
+      font-size: 25px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+
+  #tags {
+      color: red;
+  }
+  #footer {
+      text-align: center;
   }
