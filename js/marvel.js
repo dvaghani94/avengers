@@ -67,7 +67,7 @@ fetch(characterId + blackWidowId + "?ts=1&apikey=" + apiKey + "&hash=" + hash)
     blackWidowBio.innerHTML = data.data.results[0].description
   });
 
-fetch(characterId + hawkEyeId + "?ts=apikey=" + apiKey + "&hash=" + hash)
+fetch(characterId + hawkEyeId + "?ts=1&apikey=" + apiKey + "&hash=" + hash)
   .then(function (response) {
     return response.json();
   })
