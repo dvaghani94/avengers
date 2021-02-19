@@ -1,5 +1,5 @@
 body {
-    background:#000000;
+    background:black;
 }
 
 #header {
@@ -28,7 +28,6 @@ nav {
 
 p {
     text-align: center;
-    color:green;
 }
 
 .cards {
@@ -69,7 +68,6 @@ p {
   }
   
   .flip-card-front, .flip-card-back {
-    /* position:absolute; */
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
