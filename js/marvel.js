@@ -19,12 +19,16 @@ var nickFuryBio = document.getElementById("nick-fury");
 var hawkEyeBio = document.getElementById("hawkeye");
 var ironManBio = document.getElementById("iron-man")
 
+
+
 fetch(characterId + thorId + "?ts=1&apikey=" + apiKey + "&hash=" + hash)
   .then(function (response) {
     return response.json();
   })
   .then(function (data) {
     thorBio.innerHTML = data.data.results[0].description
+    console.log(data)
+    console.log(data.data.results[0].description)
   });
 
 fetch(characterId + hulkId + "?ts=1&apikey=" + apiKey + "&hash=" + hash)
@@ -33,6 +37,8 @@ fetch(characterId + hulkId + "?ts=1&apikey=" + apiKey + "&hash=" + hash)
   })
   .then(function (data) {
     hulkBio.innerHTML = data.data.results[0].description
+    console.log(data)
+    console.log(data.data.results[0].description)
   });
 
 fetch(characterId + captainAmericaId + "?ts=1&apikey=" + apiKey + "&hash=" + hash)
@@ -41,6 +47,8 @@ fetch(characterId + captainAmericaId + "?ts=1&apikey=" + apiKey + "&hash=" + has
   })
   .then(function (data) {
     captainAmericaBio.innerHTML = data.data.results[0].description
+    console.log(data)
+    console.log(data.data.results[0].description)
   });
 
 fetch(characterId + nickFuryId + "?ts=1&apikey=" + apiKey + "&hash=" + hash)
@@ -49,14 +57,8 @@ fetch(characterId + nickFuryId + "?ts=1&apikey=" + apiKey + "&hash=" + hash)
   })
   .then(function (data) {
     nickFuryBio.innerHTML = "A veteran S.H.I.E.L.D. operative, Nick Fury continues the legacy as one of the greatest super spies in the world."
-  });
-
-fetch(characterId + captainAmericaId + "?ts=1&apikey=" + apiKey + "&hash=" + hash)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    captainAmericaBio.innerHTML = data.data.results[0].description
+    console.log(data)
+    console.log(data.data.results[0].description)
   });
 
 fetch(characterId + blackWidowId + "?ts=1&apikey=" + apiKey + "&hash=" + hash)
@@ -65,6 +67,8 @@ fetch(characterId + blackWidowId + "?ts=1&apikey=" + apiKey + "&hash=" + hash)
   })
   .then(function (data) {
     blackWidowBio.innerHTML = data.data.results[0].description
+    console.log(data)
+    console.log(data.data.results[0].description)
   });
 
 fetch(characterId + hawkEyeId + "?ts=1&apikey=" + apiKey + "&hash=" + hash)
@@ -73,6 +77,8 @@ fetch(characterId + hawkEyeId + "?ts=1&apikey=" + apiKey + "&hash=" + hash)
   })
   .then(function (data) {
     hawkEyeBio.innerHTML = data.data.results[0].description
+    console.log(data)
+    console.log(data.data.results[0].description)
   });
 
 fetch(characterId + ironManId + "?ts=1&apikey=" + apiKey + "&hash=" + hash)
@@ -81,5 +87,7 @@ fetch(characterId + ironManId + "?ts=1&apikey=" + apiKey + "&hash=" + hash)
   })
   .then(function (data) {
     ironManBio.innerHTML = data.data.results[0].description
+    console.log(data)
+    console.log(data.data.results[0].description)
   });
 
