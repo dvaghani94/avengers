@@ -1,19 +1,9 @@
 body {
-<<<<<<< HEAD
-    background:black;
-}
-
-#header {
-    background: black;
-}
-
-=======
     background: black;
 }
 #header {
     background: black;
 }
->>>>>>> 5e17c8dced767dee12d818688e02eea7e539a788
 .top {
     background: white;
 }
@@ -25,7 +15,6 @@ h1 {
     text-align: center;
     font-family: 'Shadows Into Light', cursive;
 }
-<<<<<<< HEAD
 
 nav {
     text-align: center;
@@ -33,18 +22,10 @@ nav {
     color: white;
 }
 
-=======
-nav {
-    text-align: center;
-    background: black;
-    color: white
-}
->>>>>>> 5e17c8dced767dee12d818688e02eea7e539a788
 .video {
     text-align: center;
     justify-content: space-around;
 }
-<<<<<<< HEAD
 
 p {
     text-align: center;
@@ -120,35 +101,3 @@ p {
   #footer {
       text-align: center;
   }
-=======
-p {
-    text-align: center;
-}
-.cards {
-    text-align: center;
-}
-#avenge {
-    font-style: italic;
-}
-.tabs {
-    color: red;
-     
-}
-#quiz-link {
-    color: blue;
-}
-h2 {
-    color: white;
-    text-align: center;
-    font-family: 'Shadows Into Light', cursive;;
-    font-size: 25px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-#tags {
-    color: red;
-}
-#footer {
-    text-align: center;
-}
->>>>>>> 5e17c8dced767dee12d818688e02eea7e539a788
