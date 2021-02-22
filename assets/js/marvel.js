@@ -11,13 +11,13 @@ var blackWidowId = "1017109"
 var nickFuryId = "1009471"
 
 
-var thorBio = document.getElementById("thor");
-var captainAmericaBio = document.getElementById("captain-america");
-var hulkBio = document.getElementById("hulk");
-var blackWidowBio = document.getElementById("black-widow");
-var nickFuryBio = document.getElementById("nick-fury");
-var hawkEyeBio = document.getElementById("hawkeye");
-var ironManBio = document.getElementById("iron-man")
+var thorBio = document.getElementById("thorBio");
+var captainAmericaBio = document.getElementById("captainAmericaBio");
+var hulkBio = document.getElementById("hulkBio");
+var blackWidowBio = document.getElementById("blackWidowBio");
+var nickFuryBio = document.getElementById("nickFuryBio");
+var hawkEyeBio = document.getElementById("hawkEyeBio");
+var ironManBio = document.getElementById("ironManBio");
 
 
 
