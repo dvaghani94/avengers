@@ -2,7 +2,7 @@
 var searchInput = "avengers"
 var apiUrl = "https://api.twitter.com/2/tweets/search/recent?query="
 var proxy = "https://cors-anywhere.herokuapp.com/"
-
+var twitSearch = document.getElementById("twit-search");
 
 var myHeaders = new Headers();
 myHeaders.append("Authorization", "Bearer AAAAAAAAAAAAAAAAAAAAACZXMwEAAAAAbTZ9SY0Z8d%2BTq1VFBrqDYs%2FWeKo%3Di1vVMs206mb6CvipDlLvJuGgxI1qzQlRceramS8GCUpNeNw5sx");
@@ -17,13 +17,15 @@ var requestOptions = {
   redirect: 'follow'
 };
 
+twitSearch.addEventListener("click", twitterSearch)
+
+function twitterSearch() {
 fetch(queryString, requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
 
-
-
+}
 
 // 6KbkBqRDDdtNbMrLaovOHB7oy   -twitter api key
 // C5oTLEOjXt55ifu7JMC0PtjuNnRmHxLk70hSSMBIR5W1Ybo71N      twitter secret api key
