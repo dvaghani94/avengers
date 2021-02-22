@@ -11,21 +11,36 @@ myHeaders.append("Cookie", "guest_id=v1%3A161367772454425496; personalization_id
 var queryString = proxy + apiUrl + searchInput;
 console.log(queryString)
 
-var requestOptions = {
-  method: 'GET',
-  headers: myHeaders,
-  redirect: 'follow'
-};
+
+
+
+function twitterSearch(event) {
+  event.preventDefault();
+
+  fetch(queryString)
+    .then(response => response.json())
+
+    .then(function (searchData) {
+      for (var i = 0; i < searchData.length; i++) {
+        document.getElementById(`result-${i}`).textContent = searchData.data[i].text;
+        console.log(searchData.data)
+      }
+    })
+
+
+    .catch(error => console.log('error', error))
+
+}
+
 
 twitSearch.addEventListener("click", twitterSearch)
 
-function twitterSearch() {
-fetch(queryString, requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
 
-}
+
+
+
+
+
 
 // 6KbkBqRDDdtNbMrLaovOHB7oy   -twitter api key
 // C5oTLEOjXt55ifu7JMC0PtjuNnRmHxLk70hSSMBIR5W1Ybo71N      twitter secret api key

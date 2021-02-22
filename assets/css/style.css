@@ -104,3 +104,7 @@ p {
   #footer {
       text-align: center;
   }
+  #results {
+      list-style: none;
+      color: white;
+  }
